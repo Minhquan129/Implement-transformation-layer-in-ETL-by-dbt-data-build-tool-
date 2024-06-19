@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: speed_model
+    description: "Create a speed model table containing speed values only"
+    columns:
+      - name: device_id
+        description: "The primary key for this table"
+        tests: 
+          - unique
+          - not_null
+  - name: small_speed_model
+    description: "A filtered table containing speed values smaller than 0.1"
+    columns:
+      - name: device_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          
